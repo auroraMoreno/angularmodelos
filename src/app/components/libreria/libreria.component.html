@@ -1,0 +1,24 @@
+<p>Comics disponibles:</p>
+<form (ngSubmit)="insertarComic(newComic)">
+    <label>Titulo</label>
+    <input type="text" name="titulo" [(ngModel)]="newComic.titulo"/>
+    <br/>
+    <label>Imagen</label>
+    <input type="text" name="img" [(ngModel)]="newComic.img"/>
+    <br/>
+    <label>Descirpcion</label>
+    <input type="text" name="descripcion" [(ngModel)]="newComic.descripcion"/>
+    <br/>
+    <button>Insertar nuevo comic</button>
+</form>
+
+<h2>{{mensaje}}</h2>
+<div *ngFor="let c of comics, let i = index">
+    <app-comic 
+    [comic]="c"
+    [idComic]="i"
+    (recibirComic)="recibirComic($event)"
+    (eliminarComic)="eliminarComic($event)"
+></app-comic>
+</div>
+

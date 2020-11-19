@@ -1,0 +1,8 @@
+<h1>Listado de modelos Producto</h1>
+<div *ngFor="let p of productos">
+    <h1>
+        {{p.nombre}} , {{p.precio}}
+    </h1>
+    <img src="{{p.imagen}}" style="width:150px;height:150px;"/>
+</div>
+

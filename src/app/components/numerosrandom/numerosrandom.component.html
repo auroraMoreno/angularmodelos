@@ -1,0 +1,6 @@
+<h1>Numeros aleatorios</h1>
+<ul>
+    <li *ngFor="let n of numeros">
+       <a [routerLink]="['/comprobarconjetura/',n]">{{n}}</a>
+    </li>
+</ul>
